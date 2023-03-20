@@ -1,0 +1,188 @@
+Ch00 -- My Chatbot-
+	Sections-
+		Introduction-
+		Q&A-
+		Presentation-
+		Conceptual Map-
+		Extra(Maybe not?)
+	Commands-
+		\slides-
+		\break-
+		\suggest-
+		\concept-
+	Name
+		Chatot
+
+Ch01 -- Artificial Intelligence-
+	Field of-
+		Computer Science-
+	Goal-
+		incorporate-
+		Intelligence-
+		into Programs-
+	Example-
+		Minimax-
+			finds-
+				Optimal Move-
+			Games-
+				Chess-
+				Tic-Tac-Toe-
+
+Ch02 -- Machine Learning-
+	Programs-
+		learn-
+		from Data-
+	Types of Learning-
+		Supervised-
+			Categorize-
+		Unsupervised-
+			find Patterns-
+		Reinforcement-
+			Trial and Error-
+	Deep Learning-
+		imitates-
+		Human Brain-
+	ML Example-
+		Perceptron-
+	DL Example-
+		Neural Networks-
+
+Ch03 -- Natural Language Processing-
+	Definition-
+		Computer-Based-
+		Linguistics-
+	Goal-
+		achieve-
+		Human Level-
+		of Language-
+	Types-
+		NLU-
+			Understanding-
+		NLG-
+			Generation-
+	Uses-
+		Chatbots-
+		Translation-
+		Text Correction-
+
+Ch04 -- NLP Tasks & ML
+	Examples
+		Translation
+		Spam Detection
+		Virtual Assist.
+		Predictive Text
+	Sentiment Analysis
+		Goal
+			measure
+				Positivity
+				Negativity
+		No ML?
+			detect
+				Emotional Expressions
+				Made by Hand
+		Weakness
+			Language's
+				Complexity
+				Context
+			Example
+				Sarcasm
+
+Ch05 -- Early Chatbots
+	Eliza
+		emulates
+			Psychotherapist
+		formulates
+			New Sentences
+			as Questions
+	ALICE
+		uses
+		AIML
+			simplifies
+			Pattern Recog.
+	Rule-based
+		contains
+			Response Patterns
+			written manually
+
+Ch06 -- Chatbot Categories
+	Interaction
+		Text
+		Speech
+	Domain
+		Open
+			General
+				Knowledge
+		Closed
+			Specific
+	Design
+		Rule-based
+		Retrieval-based
+		Generative
+	Task
+		Task-oriented
+			Only functional
+		Non-task-oriented
+			Conversational
+
+Ch07 -- Text Preprocessing
+	Simplify
+		Input Text
+	Methods
+		Normalization
+		Lemmatization
+		Stemming
+	Vectorization
+		Transforms
+			Text to
+			Numerical Repr.
+		Goal
+			Similar Meaning
+			Similar Vector
+	Tokenization
+		Purpose
+			Splits Text
+			Smaller Units
+		Pro
+			Helps Text
+			Be processed
+			More easily
+		Con
+			Tokens
+			Don't carry
+			Meaning sometimes
+
+Ch08 -- Transformers
+	Encoder
+		Embedding (E)
+		Pos. Encoding (E)
+		Self-attention (E)
+		Postprocessing (E)
+		Output to Dec. (E)
+	Decoder
+		Embedding (D)
+		Pos. Encoding (D)
+		Masked Self-attention
+		Self-attention (D)
+		Postprocessing (D)
+		Probability Output
+		Input to form a Seq.
+
+Ch09 -- Your Tutor
+	Pros
+		State of the Art
+		Good
+			against Typos
+			recognizing
+				Questions
+	Cons
+		Context dependent
+		Complexity
+			lowers Confidence
+	Characteristics
+		Categories
+			Retrieval-based
+			Task-oriented
+			Closed Domain
+		Trained
+			with SQuADv2.0
+			in Question Answering

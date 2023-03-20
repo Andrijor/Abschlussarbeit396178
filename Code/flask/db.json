@@ -1,0 +1,1372 @@
+{
+    "chapters": [
+        {
+            "chapter_id": 0,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Course Introduction"
+                        
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Hi, welcome to My Chatbot :)",
+                        "image": "00_01",
+                        "keyword": "My Chatbot"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In this course you'll learn what a modern chatbot is and how it comes to be."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Of course, before that you will need to learn some basic concepts."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "That way you will be able to have a wider grasp on the subject."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "I'll introduce myself! My name is Chatot and my job is to teach this course.",
+                        "image": "00_02",
+                        "keyword": "Sections"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "After I give you some context in the introductory section...",
+                        "keyword": "Introduction"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... you will be able to ask me some questions regarding the current chapter."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "As you see, there are some images appearing on the right.",                        
+                        "image": "00_03"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This will be this course's visual aid / presentation.",
+                        "keyword": "Presentation"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "You can always access it by using the \\slides command.",
+                        "keyword": "Commands"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Remember you can use + instead of \\, if you'd like.",
+                        "keyword": "\\slides"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Depending on your question, you will unlock more slides in the presentation.",
+                        "keyword": "Q&A"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "You can also freely switch to each chapter's conceptual map activity.",
+                        "keyword": "Conceptual Map",
+                        "image": "00_04"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "For that, use the \\concept command.",
+                        "keyword": "\\concept"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "While asking the questions, some keywords will appear in the conceptual map."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And when you have enough, you should be able to connect them all."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "When you're done connecting them all, you finish the chapter!"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "If you need any suggestions on which questions to ask, type \\suggest.",
+                        "keyword": "\\suggest"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "We don't save any of your data in our servers, so if you need a break..."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... you can send me the \\break command to get a save code.",
+                        "keyword": "\\break"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "My name is Chatot. I teach this course. A chatbot is an AI program. This course is about learning what chatbots are and how they are made. I don't have thoughts or feelings.",
+                "context_keywords":[
+                    {
+                        "keyword": "Chatot",
+                        "placement": 14
+                    },
+                    {
+                        "keyword": "Name",
+                        "placement": 14
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "00_00",
+                        "placement": 14
+                    },
+                    {
+                        "id": "00_02",
+                        "placement": 57
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 1,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Artificial Intelligence (AI)",
+                        "keyword": "Artificial Intelligence"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "By now, most people have heard about artificial intelligence."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And it truly is everywhere."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "For example, your smartphone's voice controls...",
+                        "image": "01_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... and basically every video game in existence.",
+                        "image": "01_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Even image recognition is possible because of AI.",
+                        "image": "01_03"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "So..."
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "AI is a broad field of computer science. AI tries incorporates human intelligence into computer programs. AI works by following specific rules and algorithms, like generalized strategies. An example of AI is the minimax algorithm. Minimax tries to find the optimal move for a player in a two-player game. The minimax algorithm is used in chess, go and tic-tac-toe! Machine learning is a form of implementing AI.",
+                "context_keywords":[
+                    {
+                        "keyword": "Field of",
+                        "placement": 16
+                    },
+                    {
+                        "keyword": "Computer Science",
+                        "placement": 31
+                    },
+                    {
+                        "keyword": "Goal",
+                        "placement": 31
+                    },
+                    {
+                        "keyword": "incorporate",
+                        "placement": 56
+                    },
+                    {
+                        "keyword": "Intelligence",
+                        "placement": 73
+                    },
+                    {
+                        "keyword": "into Programs",
+                        "placement": 99
+                    },
+                    {
+                        "keyword": "Example",
+                        "placement": 213
+                    },
+                    {
+                        "keyword": "Minimax",
+                        "placement": 214
+                    },
+                    {
+                        "keyword": "finds",
+                        "placement": 249
+                    },
+                    {
+                        "keyword": "Optimal Move",
+                        "placement": 260
+                    },
+                    {
+                        "keyword": "Games",
+                        "placement": 301
+                    },
+                    {
+                        "keyword": "Chess",
+                        "placement": 340
+                    },
+                    {
+                        "keyword": "Tic-Tac-Toe",
+                        "placement": 358
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "01_04",
+                        "placement": 56
+                    },
+                    {
+                        "id": "01_05",
+                        "placement": 150
+                    },
+                    {
+                        "id": "01_06",
+                        "placement": 214
+                    },
+                    {
+                        "id": "01_07",
+                        "placement": 358
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 2,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Machine Learning (ML) and Deep Learning"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Now we know what AI is."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But machine learning is also a term you might have heard being used a lot.",
+                        "keyword": "Machine Learning",
+                        "image": "02_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Or maybe you've heard of deep learning...",
+                        "keyword": "Deep Learning",
+                        "image": "02_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Spoilers: They are definitely an important part of artificial intelligence.",
+                        "image": "02_03"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Machine learning is a technique used to make programs improve and learn from data. More details: There are different ML categories and it works differently based on its learning type. Machine learning can be unsupervised, supervised, or based on reinforcement. Supervised learning uses classified datasets to teach the model how to classify new data. Unsupervised learning tries to find patterns within the given data. Reinforcement learning works via trial-and-error improvement based on actions and rewards. Deep learning is part of machine learning. Deep learning is machine learning that uses algorithms and structures that imitate the architecture of the brain. An example of deep learning is using structures called neural networks. It is called deep because there are many layers within the neural network architecture. An example of machine learning is the perceptron. The perceptron is a program used for machine learning and it is based on a single neuron. A perceptron, it learns to classify data in two categories like red or blue. A neural network is made of multiple perceptrons connected to each other.",
+                "context_keywords":[
+                    {
+                        "keyword": "Programs",
+                        "placement": 49
+                    },
+                    {
+                        "keyword": "learn",
+                        "placement": 69
+                    },
+                    {
+                        "keyword": "from Data",
+                        "placement": 79
+                    },
+                    {
+                        "keyword": "Types of Learning",
+                        "placement": 173
+                    },
+                    {
+                        "keyword": "Supervised",
+                        "placement": 226
+                    },
+                    {
+                        "keyword": "Classify",
+                        "placement": 336
+                    },
+                    {
+                        "keyword": "Unsupervised",
+                        "placement": 215
+                    },
+                    {
+                        "keyword": "find Patterns",
+                        "placement": 392
+                    },
+                    {
+                        "keyword": "Reinforcement",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "Trial and Error",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "imitates",
+                        "placement": 632
+                    },
+                    {
+                        "keyword": "Human Brain",
+                        "placement": 662
+                    },
+                    {
+                        "keyword": "ML Example",
+                        "placement": 903
+                    },
+                    {
+                        "keyword": "Perceptron",
+                        "placement": 903
+                    },
+                    {
+                        "keyword": "ML Example",
+                        "placement": 871
+                    },
+                    {
+                        "keyword": "Perceptron",
+                        "placement": 871
+                    },
+                    {
+                        "keyword": "DL Example",
+                        "placement": 724
+                    },
+                    {
+                        "keyword": "Neural Networks",
+                        "placement": 724
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "02_04",
+                        "placement": 226
+                    },
+                    {
+                        "id": "02_05",
+                        "placement": 215
+                    },
+                    {
+                        "id": "02_06",
+                        "placement": 425
+                    },
+                    {
+                        "id": "02_07",
+                        "placement": 903
+                    },
+                    {
+                        "id": "02_08",
+                        "placement": 999
+                    },
+                    {
+                        "id": "02_09",
+                        "placement": 724
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 3,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Natural Language Processing (NLP)",
+                        "keyword": "Natural Language Processing"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "First of all, how does a computer even understand human language?"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "They just understand ones and zeros...",
+                        "image": "03_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... and languages are already not the easiest to grasp..."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... so there has to be a way to codify language to be able to work with it.",
+                        "image": "03_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And we have to be able to know what is possible to do with language and computers."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This is what's called called Natural Language Processing (NLP)."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Now, you also know that AI attempts to include human intelligence into programs."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "That partly includes languages."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Which means they truly go hand-in-hand.",
+                        "image": "03_03"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "NLP is the same as natural language processing. NLP is a computer-based approach to analyzing text based on a set of linguistic theories. AI is closely related to NLP because of its goal. The main goal of NLP is achieving a human-like level of language. NLP can be separated into natural language understanding and natural language generation. Natural language understanding receives human language and gives it a structure that computers can understand and interpret. In natural language generation a program uses computer language models to create language that people can understand. NLP can be used for auto-correcting spelling mistakes, language translation and chatbots.",
+                "context_keywords":[
+                    {
+                        "keyword": "Definition",
+                        "placement": 62
+                    },
+                    {
+                        "keyword": "Computer-Based",
+                        "placement": 68
+                    },
+                    {
+                        "keyword": "Linguistics",
+                        "placement": 122
+                    },
+                    {
+                        "keyword": "Goal",
+                        "placement": 215
+                    },
+                    {
+                        "keyword": "achieve",
+                        "placement": 215
+                    },
+                    {
+                        "keyword": "Human Level",
+                        "placement": 227
+                    },
+                    {
+                        "keyword": "of Language",
+                        "placement": 227
+                    },
+                    {
+                        "keyword": "Types",
+                        "placement": 293
+                    },
+                    {
+                        "keyword": "NLU",
+                        "placement": 293
+                    },
+                    {
+                        "keyword": "Understanding",
+                        "placement": 394
+                    },
+                    {
+                        "keyword": "NLG",
+                        "placement": 293
+                    },
+                    {
+                        "keyword": "Generation",
+                        "placement": 545
+                    },
+                    {
+                        "keyword": "Uses",
+                        "placement": 619
+                    },
+                    {
+                        "keyword": "Chatbots",
+                        "placement": 672
+                    },
+                    {
+                        "keyword": "Translation",
+                        "placement": 657
+                    },
+                    {
+                        "keyword": "Text Correction",
+                        "placement": 636
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "03_04",
+                        "placement": 227
+                    },
+                    {
+                        "id": "03_05",
+                        "placement": 449
+                    },
+                    {
+                        "id": "03_06",
+                        "placement": 546
+                    },
+                    {
+                        "id": "03_07",
+                        "placement": 626
+                    },
+                    {
+                        "id": "03_08",
+                        "placement": 658
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 4,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "NLP Tasks and Machine Learning",
+                        "keyword": "NLP Tasks & ML"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Some practical applications for NLP are used in everyday life.",
+                        "keyword": "Examples"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "For example, translating languages...",
+                        "image": "04_01",
+                        "keyword": "Translation"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... or spam detectors for your email.",
+                        "image": "04_02",
+                        "keyword": "Spam Detection"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Virtual assistants like Siri and Alexa need to understand what you want when you talk to them.",
+                        "keyword": "Virtual Assist."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Even the auto-complete function in your phone tries to predict what you want to type.",
+                        "image": "04_03",
+                        "keyword": "Predictive Text"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In this case, the program uses a model more related to AI than to ML called a Hidden Markov Model."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And it can detect typos, too!"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This chapter's question section will be about sentiment analysis.",
+                        "keyword": "Sentiment Analysis"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Which is a fairly simple NLP task and serves as a good example."
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Sentiment analysis is an application of NLP that tries to measure how positive or negative a text is. Sentiment analysis, it uses many examples to classify how emotionally charged a sentence or a paragraph is. Sentiment analysis without machine learning would try to detect keywords or patterns that might influence the emotional score. A weakness of sentiment analysis is human language's complexity and context dependency. An example of this complexity is sarcasm being detected wrongly.",
+                "context_keywords":[
+                    {
+                        "keyword": "Goal",
+                        "placement": 73
+                    },
+                    {
+                        "keyword": "measure",
+                        "placement": 61
+                    },
+                    {
+                        "keyword": "Positivity",
+                        "placement": 72
+                    },
+                    {
+                        "keyword": "Negativity",
+                        "placement": 85
+                    },
+                    {
+                        "keyword": "No ML?",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "detect",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "Emotional Expressions",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "Made by Hand",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "Weakness",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Language's",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Complexity",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Context",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Example",
+                        "placement": 461
+                    },
+                    {
+                        "keyword": "Sarcasm",
+                        "placement": 461
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "04_04",
+                        "placement": 62
+                    },
+                    {
+                        "id": "04_05",
+                        "placement": 279
+                    },
+                    {
+                        "id": "04_06",
+                        "placement": 461
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 5,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Early Chatbots",
+                        "keyword": "Early Chatbots"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Historically, some chatbot names are better known as others."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "The earliest ones were inspired by the Turing test.",
+                        "image": "05_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "To pass the test, people needed to be convinced that they were interacting with another person instead of a program.",
+                        "image": "05_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "So people tried to simulate a human-like conversation with computer programs."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "The most famous ones are probably Eliza (1966) and ALICE (1995).",
+                        "keyword": "Eliza"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Eliza is a chatbot that acts like a psychotherapist. Eliza formulates clever sentences that allow the user to just keep talking. ALICE is a chatbot that won the Loebner price three times. ALICE works by using special tags (AIML) that allows bots to recognize patterns. AIML is a markup language that helps to simplify pattern detection in input texts. These two bots are examples or kinds of rule-based chatbots, that means they are chatbots made by writing all its responses/response patterns by hand.",
+                "context_keywords":[
+                    {
+                        "keyword": "emulates",
+                        "placement": 73
+                    },
+                    {
+                        "keyword": "Psychotherapist",
+                        "placement": 61
+                    },
+                    {
+                        "keyword": "formulates",
+                        "placement": 72
+                    },
+                    {
+                        "keyword": "New Sentences",
+                        "placement": 85
+                    },
+                    {
+                        "keyword": "as Questions",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "ALICE",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "uses",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "AIML",
+                        "placement": 279
+                    },
+                    {
+                        "keyword": "simplifies",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Pattern Recog.",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Rule-based",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "contains",
+                        "placement": 398
+                    },
+                    {
+                        "keyword": "Response Patterns",
+                        "placement": 461
+                    },
+                    {
+                        "keyword": "written manually",
+                        "placement": 461
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "05_03",
+                        "placement": 14
+                    },
+                    {
+                        "id": "05_04",
+                        "placement": 143
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 6,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Chatbot Categories",
+                        "keyword": "Chatbot Categories"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In this chapter, you'll learn about what other types of chatbots there are."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "There are four categories to classify them with:"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Interaction modality",
+                        "keyword": "Interaction"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Knowledge domain",
+                        "keyword": "Domain"
+
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Chatbot's goals",
+                        "keyword": "Goal"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "and design approach",
+                        "image": "06_01",
+                        "keyword": "Design"
+                    
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Interaction modality classifies chatbots as (written) text-based or speech-based. A chatbot's knowledge domain can be open or closed domain. An open domain means the chatbot tries to understand and talk about any topic it's given. A closed domain means the chatbot can only talk about a specific subject. The chatbot's goals can be task-oriented or non-task-oriented. A task-oriented chatbot is made for a particular task. A non-task-oriented chatbot is made to simulate a general conversation. A chatbot's design can be rule-based, retrieval-based, or generative. A rule-based chatbot requires mostly hand-made templates to be able to respond. A retrieval-based chatbot uses deep learning to extract a response from a knowledge database. A generative chatbot is able to produce text responses on its own by using neural network models.",
+                "context_keywords":[
+                    {
+                        "keyword": "Text",
+                        "placement": 56
+                    },
+                    {
+                        "keyword": "Speech",
+                        "placement": 71
+                    },
+                    {
+                        "keyword": "Open",
+                        "placement": 121
+                    },
+                    {
+                        "keyword": "Closed",
+                        "placement": 128
+                    },
+                    {
+                        "keyword": "General Knowledge",
+                        "placement": 210
+                    },
+                    {
+                        "keyword": "Specific Knowledge",
+                        "placement": 293
+                    },
+                    {
+                        "keyword": "Rule-based",
+                        "placement": 510
+                    },
+                    {
+                        "keyword": "Retrieval-based",
+                        "placement": 510
+                    },
+                    {
+                        "keyword": "Generative",
+                        "placement": 510
+                    },
+                    {
+                        "keyword": "Task-oriented",
+                        "placement": 342
+                    },
+                    {
+                        "keyword": "Only one task",
+                        "placement": 412
+                    },
+                    {
+                        "keyword": "Non-task-oriented",
+                        "placement": 342
+                    },
+                    {
+                        "keyword": "Conversational",
+                        "placement": 487
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "06_02",
+                        "placement": 56
+                    },
+                    {
+                        "id": "06_03",
+                        "placement": 510
+                    },
+                    {
+                        "id": "06_04",
+                        "placement": 121
+                    },
+                    {
+                        "id": "06_05",
+                        "placement": 342
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 7,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Modern Chatbots - Part 1"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "Text Preprocessing",
+                        "keyword": "Text Preprocessing"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Before we start covering specific language models, it's important to start from the beginning."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "If we want to use a ML language model, we have to feed it some language data.",
+                        "image": "07_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But as mentioned before, computers don't really understand anything other than ones and zeros.",
+                        "image": "07_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In order to further simplify the process for the program...",
+                        "keyword": "Simplify"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... some things need to be removed from the text.",
+                        "keyword": "Input Text"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "For example, to a computer the words 'Bot' and 'bot' are different...",
+                        "image": "07_03"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... because both 'B's are codified differently."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Or _  _  maybe  _ _ there  _ _ are too _  _ many blank spaces _ _  ..."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Or too... many **special** symbols?!!! in the text."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Normalizing the text includes removing these unnecessary details.",
+                        "keyword": "Normalizing"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Obviously, depending on which domain you are working on, different factors get normalized."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "There are other ways of preprocessing text."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Like stemming, which removes everything except a word's stem.",
+                        "keyword": "Stemming"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This might output non-existent stems."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And lemmatization, a smarter form of stemming, is more accurate and outputs correct word stems...",
+                        "keyword": "Lemmatization"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But it requires contextual data or training to function properly.",
+                        "image": "07_04"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Now, language models don't use plain text (strings) to train."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "They need vectorization and tokenization.",
+                        "keyword": "Vectorization",
+                        "image": "07_05"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Vectorization entails transforming plain text into a numerical representation. Vectors can be created from whole texts, sentences or single words. The goal of vectorization is creating vectors that are similar when the meaning of their content is similar as well. The condition to vectorize text is that it should be tokenized. Tokenization means splitting the text into smaller units like words. Tokenization is good in the sense that it makes plain text easier to understand for the computer. The bad part of tokenization is that the single tokens don't necessarily carry much meaning within them.",
+                "context_keywords":[
+                    {
+                        "keyword": "Transforms",
+                        "placement": 60
+                    },
+                    {
+                        "keyword": "Text to",
+                        "placement": 60
+                    },
+                    {
+                        "keyword": "Numerical Repr.",
+                        "placement": 60
+                    },
+                    {
+                        "keyword": "Goal",
+                        "placement": 183
+                    },
+                    {
+                        "keyword": "Similar Meaning",
+                        "placement": 183
+                    },
+                    {
+                        "keyword": "Similar Vector",
+                        "placement": 183
+                    },
+                    {
+                        "keyword": "Tokenization",
+                        "placement": 353
+                    },
+                    {
+                        "keyword": "Purpose",
+                        "placement": 353
+                    },
+                    {
+                        "keyword": "Splits Text",
+                        "placement": 353
+                    },
+                    {
+                        "keyword": "Smaller Units",
+                        "placement": 353
+                    },
+                    {
+                        "keyword": "Pro",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "Helps Text",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "Be processed",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "More easily",
+                        "placement": 459
+                    },
+                    {
+                        "keyword": "Con",
+                        "placement": 570
+                    },
+                    {
+                        "keyword": "Tokens",
+                        "placement": 570
+                    },
+                    {
+                        "keyword": "Don't carry",
+                        "placement": 570
+                    },
+                    {
+                        "keyword": "Meaning sometimes",
+                        "placement": 570
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "07_06",
+                        "placement": 353
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 8,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Modern Chatbots - Part 2"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "Current State of the Art"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "(Early 2023)"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "There are different ways of using neural networks for NLP."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Some predecessors of the current state of the art are recurrent neural networks (RNN) and long short-term memory networks (LSTM).",
+                        "image": "08_01"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "We won't cover these network models in the course.",
+                        "image": "08_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But you've probably already heard about ChatGPT and its influence by now."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "It and its three predecessors, GPT 1, 2 and 3 are all transformer language models.",
+                        "keyword": "Transformers"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "There is another important transformer model called BERT."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Understanding how they differ is not relevant for now."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But transformers... what are they?",
+                        "image": "08_03"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In this course you will learn a very simplified version of what they are."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "It won't be short, though!"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Also please try to ask questions based on the steps in the simplified model."
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Transformers are an Encoder-Decoder model. An encoder, it is the component that initially takes an input text (usually a sentence) and transforms it. A decoder is the component that reads the encoded data and predicts a sequence of words. This decoded sequence could be a language translation or a response to a question. Step 1: Everything starts by utilizing a word embedding. A word embedding is a mapping of words in a vector space. A mapping is something like a word-to-vector dictionary. Step 2: All these word vectors are then assigned positional data based on where they are in the sentence. Step 3: The input is encoded through a layer of self-attention. What happens within self-attention is a comparison of each word with all of the others in the sentence. This comparison calculates how relevant a word's meaning is in relation to another single word. Step 4: Each newly calculated vector gets transformed further and normalized to simplify future calculations. Step 5:The now transformed data gets sent to the decoder. Step 6: The decoder receives an embedding based on what its target goal is. Step 7: the vectors from the embedding receive positional data. Step 8: The decoder embedding passes through a masked attention layer. Step 9: The data passes through a second attention layer together with the encoded data. Step 10: The data gets normalized. Step 11: The data gets made into a probability vector for the next most likely word. Step 12: The output word gets used as an input to continue the sequence until it finishes.",
+                "context_keywords":[
+                    {
+                        "keyword": "Encoder",
+                        "placement": 23
+                    },
+                    {
+                        "keyword": "Embedding (E)",
+                        "placement": 390
+                    },
+                    {
+                        "keyword": "Pos. Encoding (E)",
+                        "placement": 551
+                    },
+                    {
+                        "keyword": "Self-attention (E)",
+                        "placement": 656
+                    },
+                    {
+                        "keyword": "Postprocessing (E)",
+                        "placement": 922
+                    },
+                    {
+                        "keyword": "Output to Dec. (E)",
+                        "placement": 1014
+                    },
+                    {
+                        "keyword": "Decoder",
+                        "placement": 23
+                    },
+                    {
+                        "keyword": "Embedding (D)",
+                        "placement": 1070
+                    },
+                    {
+                        "keyword": "Pos. Encoding (D)",
+                        "placement": 1160
+                    },
+                    {
+                        "keyword": "Masked Self-attention",
+                        "placement": 1222
+                    },
+                    {
+                        "keyword": "Self-attention (D)",
+                        "placement": 1280
+                    },
+                    {
+                        "keyword": "Postprocessing (D)",
+                        "placement": 1360
+                    },
+                    {
+                        "keyword": "Probability Output",
+                        "placement": 1405
+                    },
+                    {
+                        "keyword": "Input to form a Seq.",
+                        "placement": 1520
+                    }
+                ],
+                "context_images":[
+                    {
+                        "id": "08_04",
+                        "placement": 86
+                    },
+                    {
+                        "id": "08_05",
+                        "placement": 186
+                    },
+                    {
+                        "id": "08_06",
+                        "placement": 343
+                    }
+                ]
+            }
+        },
+        {
+            "chapter_id": 9,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "RoBERTa and your Chatbot Tutor",
+                        "keyword": "Your Tutor"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "The chatbot that serves as a tutor in this course..."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "... is actually a version of BERT, so a transformer language model.",
+                        "image": "09_01",
+                        "keyword": "State of the Art"
+
+                    },
+                    {
+                        "author": "bot",
+                        "message": "RoBERTa stands for Robustly Optimized BERT Approach."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "As its name suggests, it's an optimized version of BERT and it performs better than it in many ways."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "RoBERTa is a pre-trained model, but it can be trained further (fine-tuned) to fulfill specific tasks."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This version of RoBERTa is trained in question answering.",
+                        "image": "09_02"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Some strengths of the model are pretty clear.",
+                        "keyword": "Good"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "The questions you send don't need much special formatting, and don't even need to be formulated as questions.",
+                        "keyword": "recognizing Questions"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "It's even robust against some typos.",
+                        "image": "09_03",
+                        "keyword": "against Typos"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And when it has low confidence in an answer, it signals it.",
+                        "image": "09_04"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "But the model is very dependent on the data you give it.",
+                        "keyword": "Cons"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "And changing a single word can affect its pattern detection significantly.",
+                        "keyword": "Context dependent"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "In the Q&A section you can ask about some pros, cons, and characteristics of your chatbot tutor.",
+                        "keyword": "Characteristics"
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "You are free to ask questions now."
+                    }
+                ],
+                "context": "Some pros include that the chatbot model understands questions and the context without specific programming. A con of the chatbot model is that it might not be able to respond to a question when the context is too complex. The chatbot model can be classified as retrieval-based and task-oriented in a closed domain. The chatbot model got trained in question answering with a dataset called SQuAD 2.0. This dataset contains 150k example questions and answers",
+                "context_keywords":[
+                    {
+                        "keyword": "Complexity",
+                        "placement": 216
+                    },
+                    {
+                        "keyword": "lowers Confidence",
+                        "placement": 216
+                    },
+                    {
+                        "keyword": "Categories",
+                        "placement": 267
+                    },
+                    {
+                        "keyword": "Retrieval-based",
+                        "placement": 267
+                    },
+                    {
+                        "keyword": "Task-oriented",
+                        "placement": 267
+                    },
+                    {
+                        "keyword": "Closed Domain",
+                        "placement": 267
+                    },
+                    {
+                        "keyword": "Trained",
+                        "placement": 355
+                    },
+                    {
+                        "keyword": "with SQuADv2.0",
+                        "placement": 355
+                    },
+                    {
+                        "keyword": "in Question Answering",
+                        "placement": 355
+                    }
+                ],
+                "context_images":[]
+            }
+        },
+        {
+            "chapter_id": 10,
+            "contents": {
+                "messages": [
+                    {
+                        "author": "no-auth",
+                        "message": "Chatbot Training Simulation"
+                    },
+                    {
+                        "author": "bot",
+                        "message": "This chapter will be a simulation of how to train a chatbot to function like a virtual assistant."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Also you can ask me anything from any chapter from the course."
+                    },
+                    {
+                        "author": "no-auth",
+                        "message": "Have fun!"
+                    }
+                ],
+                "context": "My name is Chatot. I teach this course. A chatbot is an AI program. This course is about learning what chatbots are and how they are made. I don't have thoughts or feelings. AI is a broad field of computer science. AI tries incorporates human intelligence into computer programs. AI works by following specific rules and algorithms, like generalized strategies. An example of AI is the minimax algorithm. Minimax tries to find the optimal move for a player in a two-player game. The minimax algorithm is used in chess, go and tic-tac-toe! Machine learning is a form of implementing AI. Machine learning is a technique used to make programs improve and learn from data. More details: There are different ML categories and it works differently based on its learning type. Machine learning can be unsupervised, supervised, or based on reinforcement. Supervised learning uses classified datasets to teach the model how to recognize new data. Unsupervised learning tries to find patterns within the given data. Reinforcement learning works via trial-and-error improvement based on actions and rewards. Deep learning is part of machine learning. Deep learning is machine learning that uses algorithms and structures that imitate the architecture of the brain. An example of deep learning is using structures called neural networks. It is called deep because there are many layers within the neural network architecture. An example of machine learning is the perceptron. The perceptron is a program used for machine learning and it is based on a single neuron. A perceptron, it learns to classify data in two categories like red or blue. A neural network is made of multiple perceptrons connected to each other. NLP is the same as natural language processing. NLP is a computer-based approach to analyzing text based on a set of linguistic theories. AI is closely related to NLP because of its goal. The main goal of NLP is achieving a human-like level of language. NLP can be separated into natural language understanding and natural language generation. Natural language understanding receives human language and gives it a structure that computers can understand and interpret. In natural language generation a program uses computer language models to create language that people can understand. NLP can be used for auto-correcting spelling mistakes, language translation and chatbots. Sentiment analysis is an application of NLP that tries to measure how positive or negative a text is. Sentiment analysis, it uses many examples to classify how emotionally charged a sentence or a paragraph is. Sentiment analysis without machine learning would try to detect keywords or patterns that might influence the emotional score. A weakness of sentiment analysis is human language's complexity and context dependency. An example of this complexity is sarcasm being detected wrongly.Eliza is a chatbot that acts like a psychotherapist. Eliza formulates clever sentences that allow the user to just keep talking. ALICE is a chatbot that won the Loebner price three times. ALICE works by using special tags (AIML) that allows bots to recognize patterns. AIML is a markup language that helps to simplify pattern detection in input texts. These two bots are examples or kinds of rule-based chatbots, that means they are chatbots made by writing all its responses/response patterns by hand. Interaction modality classifies chatbots as (written) text-based or speech-based. A chatbot's knowledge domain can be open or closed domain. An open domain means the chatbot tries to understand and talk about any topic it's given. A closed domain means the chatbot can only talk about a specific subject. The chatbot's goals can be task-oriented or non-task-oriented. A task-oriented chatbot is made for a particular task. A non-task-oriented chatbot is made to simulate a general conversation. A chatbot's design can be rule-based, retrieval-based, or generative. A rule-based chatbot requires mostly hand-made templates to be able to respond. A retrieval-based chatbot uses deep learning to extract a response from a knowledge database. A generative chatbot is able to produce text responses on its own by using neural network models. Vectorization entails transforming plain text into a numerical representation. Vectors can be created from whole texts, sentences or single words. The goal of vectorization is creating vectors that are similar when the meaning of their content is similar as well. The condition to vectorize text is that it should be tokenized. Tokenization means splitting the text into smaller units like words. Tokenization is good in the sense that it makes plain text easier to understand for the computer. The bad part of tokenization is that the single tokens don't necessarily carry much meaning within them. Transformers are an Encoder-Decoder model. An encoder, it is the component that initially takes an input text (usually a sentence) and transforms it. A decoder is the component that reads the encoded data and predicts a sequence of words. This decoded sequence could be a language translation or a response to a question. Step 1: Everything starts by utilizing a word embedding. A word embedding is a mapping of words in a vector space. A mapping is something like a word-to-vector dictionary. Step 2: All these word vectors are then assigned positional data based on where they are in the sentence. Step 3: The input is encoded through a layer of self-attention. What happens within self-attention is a comparison of each word with all of the others in the sentence. This comparison calculates how relevant a word's meaning is in relation to another single word. Step 4: Each newly calculated vector gets transformed further and normalized to simplify future calculations. Step 5:The now transformed data gets sent to the decoder. Step 6: The decoder receives an embedding based on what its target goal is. Step 7: the vectors from the embedding receive positional data. Step 8: The decoder embedding passes through a masked attention layer. Step 9: The data passes through a second attention layer together with the encoded data. Step 10: The data gets normalized. Step 11: The data gets made into a probability vector for the next most likely word. Step 12: The output word gets used as an input to continue the sequence until it finishes. Some pros include that the chatbot model understands questions and the context without specific programming. A con of the chatbot model is that it might not be able to respond to a question when the context is too complex. The chatbot model can be classified as retrieval-based and task-oriented in a closed domain. The chatbot model got trained in question answering with a dataset called SQuAD 2.0. This dataset contains 150k example questions and answers. To play the simulation, type \\simulation."
+            },
+            "context_keywords":[
+            ],
+            "context_images":[
+            ]
+        }
+    ]
+    
+}
