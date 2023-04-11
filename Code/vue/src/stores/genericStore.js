@@ -1,5 +1,6 @@
 import { ref, computed, watch } from "vue";
 import { defineStore } from "pinia";
+import { Carousel } from "bootstrap/dist/js/bootstrap.min.js"
 
 export const useCounterStore = defineStore("generic", () => {
 
@@ -22,25 +23,34 @@ export const useCounterStore = defineStore("generic", () => {
   /* Constants for reference */
   const totalSlides = [4, 7, 9, 8, 6, 4, 5, 6, 6, 4];
   const slideProperties = ref();
-  fetch('src/assets/GIMP Assets/image_properties.json')
+  fetch('src/assets/slide_assets/image_properties.json')
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       slideProperties.value = (JSON.parse(JSON.stringify(data)));
     })
+
+  const questionKeywordPairs = ref();
+  fetch('src/assets/slide_assets/question_keyword_pairs.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      questionKeywordPairs.value = (JSON.parse(JSON.stringify(data)));
+    })
   
   const totalKeywordsPerChapter = {
     0: 13,
-    1: 14,
-    2: 20,
+    1: 17,
+    2: 25,
     3: 17,
-    4: 21,
+    4: 23,
     5: 16,
-    6: 18,
-    7: 25,
-    8: 15,
-    9: 17,
+    6: 22,
+    7: 26,
+    8: 22,
+    9: 18,
     10: 0
   }
   
@@ -61,7 +71,7 @@ export const useCounterStore = defineStore("generic", () => {
   const currentSlides = ref([{
     id: '00_00',
     index: 0,
-    src: "src/assets/GIMP Assets/00_00.png",
+    src: "src/assets/slide_assets/00_00.png",
     title: "",
     caption: ""
   }]);
@@ -104,7 +114,7 @@ export const useCounterStore = defineStore("generic", () => {
           currentSlides.value.push({
             id: id,
             index: currentSlides.value.length,
-            src: "src/assets/GIMP Assets/" + id + format,
+            src: "src/assets/slide_assets/" + id + format,
             title: properties.title,
             caption: properties.caption
           });
@@ -119,6 +129,32 @@ export const useCounterStore = defineStore("generic", () => {
       return k.id == id;
     });
     keyword.width = width;
+  }
+
+  const suggestQuestion = function(){
+    //console.log(questionKeywordPairs.value);
+    let chapters = questionKeywordPairs.value.chapters;
+
+    for (let i = 0 ; i < chapters.length ; i++){
+
+      let chapter = chapters[i];
+      if (chapter.chapter_id == currentChapter.value){
+
+        for (let j = 0 ; j < chapter.question_keywords.length ; j++){
+
+          let keyword = chapter.question_keywords[j].keyword;
+
+          let searchKeyword = currentConceptShapes.value.find((shape) => {
+            return shape.content == keyword;
+          });
+
+          if (searchKeyword == undefined){
+            return chapter.question_keywords[j].question;
+          }
+        }
+      }
+    }
+    return "";
   }
 
   const addKeyword = function(x, y, id, fontSize, content, width) {
@@ -155,20 +191,43 @@ export const useCounterStore = defineStore("generic", () => {
     chapterUnlocked.value.push(false);
   }
   chapterUnlocked.value[0] = true;
-  chapterUnlocked.value[1] = true;
-  chapterUnlocked.value[2] = true;
-  chapterUnlocked.value[3] = true;
-  chapterUnlocked.value[4] = true;
-  //chapterUnlocked.value[8] = true;
+
  
   const resetSlides = function(){
-    currentSlides.value = [{
-      id: '00_00',
-      index: 0,
-      src: "src/assets/GIMP Assets/00_00.png",
-      title: "",
-      caption: ""
-    }];
+    let carousel = undefined;
+    let imageCarousel = null;
+    if(currentActivity.value == "slides"){
+      imageCarousel = document.querySelector("#image-carousel");
+      if (imageCarousel != null){
+        carousel = Carousel.getOrCreateInstance(imageCarousel)
+      }
+    }
+
+    let checkInit = currentSlides.value.find((s) => {
+      return s.id == "00_00";
+    });
+
+    if(checkInit == undefined){
+      currentSlides.value.shift();
+
+      currentSlides.value.unshift({
+        id: '00_00',
+        index: 0,
+        src: "src/assets/slide_assets/00_00.png",
+        title: "",
+        caption: ""
+      });
+    }
+
+    if(carousel != undefined){
+      carousel.to(0);
+    }
+   
+    while(currentSlides.value.length > 1){
+      currentSlides.value.pop();
+      //console.log("Length: " + currentSlides.value.length);
+    }
+    
   }
 
   const resetConcept = function(){
@@ -218,7 +277,7 @@ export const useCounterStore = defineStore("generic", () => {
     return prefersDarkTheme.value;
   }
   function toggleThemeFlag(value) {
-    themeWasSet.value = true;
+    themeWasSet.value = value;
   }
 
   function increment() {
@@ -232,7 +291,7 @@ export const useCounterStore = defineStore("generic", () => {
     currentChapter.value++;
   }
   function setCurrentChapter(ch) {
-    if (ch <= chapterCount.value ) {
+    if (ch < chapterCount.value ) {
       currentChapter.value = ch;
     }
   }
@@ -282,13 +341,17 @@ export const useCounterStore = defineStore("generic", () => {
     return str.match(new RegExp('.{1,' + length + '}', 'g'));
   }
 
+  const unlockChapter = function(ch){
+    chapterUnlocked.value[ch] = true;
+  }
+
   function getBreakCode(){
-    var code = "";
+    var breakCode = "";
 
     // Theme
     var theme = prefersDarkTheme.value ? 1 : 0;
     var themeBin = theme.toString(2);
-    code = code + themeBin;
+    breakCode = breakCode + themeBin;
 
     // Last Unlocked Chapter -- current upper limit 31 (5 bits)
     var currentLast = 0;
@@ -303,27 +366,76 @@ export const useCounterStore = defineStore("generic", () => {
     }
     var currentLastBin = parseInt(currentLast, 10).toString(2);
     currentLastBin = pad(currentLastBin, 5);
-    code = code + currentLastBin;
+    breakCode = breakCode + currentLastBin;
 
     var gameBin = "0000000000000";
-    code = code + gameBin;
+    breakCode = breakCode + gameBin;
 
-    var checksum = countOnes(code);
-    var checksumBin = parseInt(checksum, 10).toString(2);
-    checksumBin = pad(currentLastBin, 5);
+    var checksum = countOnes(breakCode);
+    //console.log("Ones: " + checksum);
+    //console.log("Parsed ones: " +parseInt(checksum, 10));
+    var checksumBin = checksum.toString(2);
+    //console.log("Binary String: " + checksumBin);
+    checksumBin = pad(checksumBin, 5);
+    //console.log("Binary padded"+checksumBin);
 
-    code = code + checksumBin;
-    code = chunkString(code, 3);
-    for (let i = 0 ; i < code.length ; i++){
-      code[i] = stringIcons[parseInt(code[i], 2)];
+    breakCode = breakCode + checksumBin;
+    breakCode = chunkString(breakCode, 3);
+    //console.log(breakCode);
+    for (let i = 0 ; i < breakCode.length ; i++){
+      breakCode[i] = stringIcons[parseInt(breakCode[i], 2)];
     }
 
-    console.log(code);
-    return code;
+    //console.log(breakCode);
+    return breakCode;
   }
 
-  function setBreakCode(){
+  const setBreakCode = function(){
+    //console.log(code.value);
+    let checkFull = true;
+    for (let i = 0 ; i < 8 ; i++){
+      if(code.value[i] == 0){
+        checkFull = false;
+        break;
+      }
+    }
+    if (!checkFull){
+      return;
+    }
 
+    let binCode = "";
+
+    for (let i = 0 ; i < 8 ; i++){
+      let octal = (code.value[i] - 1).toString(2);
+      octal = pad(octal, 3);
+      binCode = binCode + octal;
+    }
+    //console.log(binCode);
+    var checksumFlag = countOnes(binCode.slice(0, 19)) == parseInt(binCode.slice(19, 24), 2);
+    //console.log(binCode.slice(0, 19));
+    //console.log(countOnes(binCode.slice(0, 19)));
+    //console.log(binCode.slice(19, 24));
+    //console.log(parseInt(binCode.slice(19, 25), 2));
+
+    if (!checksumFlag) {
+      //console.log(binCode);
+      return;
+    }
+
+    let theme = parseInt(binCode.slice(0, 1), 2);
+    setTheme(theme == 1);
+
+    let lastUnlocked = parseInt(binCode.slice(1, 6), 2);
+    //console.log("Last: " +lastUnlocked)
+
+    for (let i = 0 ; i < chapterUnlocked.value.length ; i++){
+      chapterUnlocked.value[i] = false;
+    }
+
+    for (let i = 0 ; i <= lastUnlocked ; i++){
+      chapterUnlocked.value[i] = true;
+    }
+    
   }
   const icons = [
     "bi-square-fill",             // 0 
@@ -355,6 +467,19 @@ export const useCounterStore = defineStore("generic", () => {
     currentChapter.value = JSON.parse(sessionStorage.getItem("currentChapter"));
   }
 
+  if (sessionStorage.getItem("lastUnlocked")){
+ 
+    let lastUnlocked = JSON.parse(sessionStorage.getItem("lastUnlocked"));
+
+    for (let i = 0 ; i < chapterUnlocked.value.length ; i++){
+      chapterUnlocked.value[i] = false;
+    }
+
+    for (let i = 0 ; i <= lastUnlocked ; i++){
+      chapterUnlocked.value[i] = true;
+    }
+  }
+
   if (sessionStorage.getItem("darkTheme")){
     prefersDarkTheme.value = JSON.parse(sessionStorage.getItem("darkTheme"));
   }
@@ -362,6 +487,25 @@ export const useCounterStore = defineStore("generic", () => {
   if (sessionStorage.getItem("themeWasSet")){
     themeWasSet.value = JSON.parse(sessionStorage.getItem("themeWasSet"));
   }
+
+  watch(
+    chapterUnlocked,
+    () => {
+      var currentLast = 0;
+      for (let i = 0 ; i < chapterCount.value ; i++){
+        currentLast = i;
+  
+        if (chapterUnlocked.value[i] == false){
+          currentLast--;
+          break;
+        }
+  
+      }
+
+      sessionStorage.setItem("lastUnlocked", JSON.stringify(currentLast));
+    },
+    { deep: true }
+);
 
   watch(
       currentChapter,
@@ -387,5 +531,15 @@ export const useCounterStore = defineStore("generic", () => {
     { deep: true }
   );
 
-  return { count, doubleCount, increment, decrease, code, icons, codeIndex, codeKeyboard, inputIcons, currentChapter, chapterString, nextChapter, playTicTacToe, userStartedChapter, setStartedChapter, setTheme, prefersDarkTheme, themeWasSet, toggleThemeFlag, getPreferredTheme, chapterCount, chapterUnlocked, setCurrentChapter, currentActivity, setActivityTo, addLine, removeLine, currentConceptShapes, currentConceptLines, addKeyword, currentSlides, addSlide, setKeywordWidth, resetConcept, resetSlides, progressBar, getBreakCode, setBreakCode };
+  const resetChapter = function(){
+    //console.log("RESETTING");
+
+    resetConcept();
+    setActivityTo("slides");
+    resetSlides();
+
+    
+  }
+
+  return { count, doubleCount, increment, decrease, code, icons, codeIndex, codeKeyboard, inputIcons, currentChapter, chapterString, nextChapter, playTicTacToe, userStartedChapter, setStartedChapter, setTheme, prefersDarkTheme, themeWasSet, toggleThemeFlag, getPreferredTheme, chapterCount, chapterUnlocked, setCurrentChapter, currentActivity, setActivityTo, addLine, removeLine, currentConceptShapes, currentConceptLines, addKeyword, currentSlides, addSlide, setKeywordWidth, resetConcept, resetSlides, progressBar, getBreakCode, setBreakCode, unlockChapter, resetChapter, suggestQuestion };
 });

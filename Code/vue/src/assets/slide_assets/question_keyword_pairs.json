@@ -1,0 +1,353 @@
+{
+    "chapters": [
+        {
+            "chapter_id": 0,
+            "question_keywords":[
+                {
+                    "keyword": "Name",
+                    "question": "What's your name?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 1,
+            "question_keywords":[
+                {
+                    "keyword": "Field of",
+                    "question": "What is AI?"
+                },
+
+                {
+                    "keyword": "Goal",
+                    "question": "What's the goal of AI?"
+                },
+                {
+                    "keyword": "Rules and Algorithms",
+                    "question": "How does AI work?"
+                },
+                {
+                    "keyword": "Minimax",
+                    "question": "What is an example of AI?"
+                },
+
+                {
+                    "keyword": "Optimal Move",
+                    "question": "What does the minimax algorithm do?"
+                },
+
+                {
+                    "keyword": "Chess",
+                    "question": "What's is minimax used for?"
+                },
+                {
+                    "keyword": "Machine Learning",
+                    "question": "What's machine learning?"
+                }
+            ]
+            
+        },
+        {
+            "chapter_id": 2,
+            "question_keywords":[
+
+                {
+                    "keyword": "from Data",
+                    "question": "What is machine learning?"
+                },
+                {
+                    "keyword": "Types of Learning",
+                    "question": "How does ML work?"
+                },
+                {
+                    "keyword": "Supervised",
+                    "question": "What are the types of machine learning?"
+                },
+                {
+                    "keyword": "Classify",
+                    "question": "What's supervised learning?"
+                },
+                {
+                    "keyword": "find Patterns",
+                    "question": "What's unsupervised learning?"
+                },
+                {
+                    "keyword": "Trial and Error",
+                    "question": "What's reinforcement learning?"
+                },
+
+                {
+                    "keyword": "Human Brain",
+                    "question": "What is deep learning?"
+                },
+
+                {
+                    "keyword": "Perceptron",
+                    "question": "What would be an example of machine learning?"
+                },
+                {
+                    "keyword": "Neuron Inspired",
+                    "question": "What is a perceptron?"
+                },
+                {
+                    "keyword": "Binary Classification",
+                    "question": "How does a perceptron work?"
+                },
+                {
+                    "keyword": "Neural Networks",
+                    "question": "What's is an example for deep learning?"
+                },
+                {
+                    "keyword": "Multiple Perceptrons",
+                    "question": "What is a neural network?"
+                }
+            ]
+
+        },
+        {
+            "chapter_id": 3,
+            "question_keywords":[
+                {
+                    "keyword": "Linguistics",
+                    "question": "What is NLP?"
+                },
+                {
+                    "keyword": "Human Level",
+                    "question": "What's the goal of NLP?"
+                },
+                {
+                    "keyword": "Types",
+                    "question": "What kinds of NLP are there?"
+                },
+
+                {
+                    "keyword": "Understanding",
+                    "question": "What's natural language understanding?"
+                },
+
+                {
+                    "keyword": "Generation",
+                    "question": "What is natural language generation?"
+                },
+
+                {
+                    "keyword": "Chatbots",
+                    "question": "What are some uses for NLP?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 4,
+            "question_keywords":[
+                {
+                    "keyword": "NLP Task",
+                    "question": "What is sentiment analysis?"
+                },
+                {
+                    "keyword": "or measure",
+                    "question": "What is the goal of sentiment analysis?"
+                },
+                {
+                    "keyword": "Uses ML",
+                    "question": "How does sentiment analysis work?"
+                },
+                {
+                    "keyword": "No ML?",
+                    "question": "How would sentiment analysis work without machine learning?"
+                },
+                {
+                    "keyword": "Weakness",
+                    "question": "What's a weakness of sentiment analysis?"
+                },
+                {
+                    "keyword": "Sarcasm",
+                    "question": "What counts as part of this complexity?"
+                }
+            ]
+            
+        },
+        {
+            "chapter_id": 5,
+            "question_keywords":[
+                {
+                    "keyword": "Psychotherapist",
+                    "question": "What is Eliza?"
+                },
+                {
+                    "keyword": "formulates",
+                    "question": "How does Eliza work?"
+                },
+                {
+                    "keyword": "ALICE",
+                    "question": "What is ALICE?"
+                },
+                {
+                    "keyword": "uses",
+                    "question": "How does ALICE work?"
+                },
+                {
+                    "keyword": "AIML",
+                    "question": "What's AIML?"
+                },
+                {
+                    "keyword": "Rule-based",
+                    "question": "What kind of chatbot are Eliza and Alice?"
+                },
+                {
+                    "keyword": "Response Patterns",
+                    "question": "What are rule-based chatbots?"
+                }
+            ]
+
+        },
+        {
+            "chapter_id": 6,
+            "question_keywords":[
+                {
+                    "keyword": "Text",
+                    "question": "How are chatbots classified by interaction?"
+                },
+                {
+                    "keyword": "Open",
+                    "question": "How are chatbots classified by domain?"
+                },
+                {
+                    "keyword": "General Knowledge",
+                    "question": "What's an open domain?"
+                },
+                {
+                    "keyword": "Specific Knowledge",
+                    "question": "What's a closed domain?"
+                },
+                {
+                    "keyword": "Task-oriented",
+                    "question": "How are chatbots classified by their goals?"
+                },
+                {
+                    "keyword": "Only one task",
+                    "question": "What's a task-oriented chatbot?"
+                },
+                {
+                    "keyword": "Conversational",
+                    "question": "What's a non-task-oriented chatbot?"
+                },
+                {
+                    "keyword": "Rule-based",
+                    "question": "How are chatbots classified by design?"
+                },
+                {
+                    "keyword": "Hand-made Templates",
+                    "question": "What's a rule-based chatbot?"
+                },
+                {
+                    "keyword": "Extracts Responses",
+                    "question": "What's a retrieval-based chatbot?"
+                },
+                {
+                    "keyword": "Produces Text",
+                    "question": "What's a generative chatbot?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 7,
+            "question_keywords":[
+                {
+                    "keyword": "Transforms",
+                    "question": "What's vectorization?"
+                },
+                {
+                    "keyword": "Similar Meaning",
+                    "question": "What's the goal of vectorization?"
+                },
+                {
+                    "keyword": "Before Vectorizing",
+                    "question": "What should happen before vectorizing text?"
+                },
+                {
+                    "keyword": "Smaller Units",
+                    "question": "What's tokenization?"
+                },
+                {
+                    "keyword": "Helps Text",
+                    "question": "What are some benefits of tokenization?"
+                },
+                {
+                    "keyword": "Don't carry",
+                    "question": "What are some weaknesses of tokenization?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 8,
+            "question_keywords":[
+                {
+                    "keyword": "Encoder",
+                    "question": "What's an encoder?"
+                },
+                {
+                    "keyword": "Decoder",
+                    "question": "What's a decoder?"
+                },
+                {
+                    "keyword": "Sequence Examples",
+                    "question": "What can the decoded sequence be?"
+                },
+                {
+                    "keyword": "Word Embedding",
+                    "question": "What is a word embedding?"
+                },
+                {
+                    "keyword": "Mapping of Words",
+                    "question": "What's a mapping?"
+                },
+                {
+                    "keyword": "Comparison",
+                    "question": "What's self-attention?"
+                },
+                {
+                    "keyword": "Between Words",
+                    "question": "What gets calculated in the comparison?"
+                },
+                {
+                    "keyword": "Input to form a Seq.",
+                    "question": "What is step 1-12?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 9,
+            "question_keywords":[
+                {
+                    "keyword": "No explicit Programming",
+                    "question": "What are some pros of the model?"
+                },
+                {
+                    "keyword": "Complexity",
+                    "question": "What is a con of the chatbot?"
+                },
+                {
+                    "keyword": "Categories",
+                    "question": "How is the chatbot classified?"
+                },
+                {
+                    "keyword": "Trained",
+                    "question": "How was the chatbot trained?"
+                },
+                {
+                    "keyword": "with SQuADv2.0",
+                    "question": "What is the SQuAD dataset?"
+                }
+            ]
+        },
+        {
+            "chapter_id": 10,
+            "question_keywords":[
+                {
+                    "keyword": "123",
+                    "question": "Ask any question you want!"
+                }
+            ]
+        }
+    ]
+    
+}

@@ -1,5 +1,17 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import { watch } from 'vue'
+import { useCounterStore } from "@/stores/genericStore"
+const gameState = useCounterStore();
+
+
+watch(() => gameState.currentChapter,
+    () => {
+        gameState.resetChapter();
+    }
+);
+
+
 </script>
 
 <template>

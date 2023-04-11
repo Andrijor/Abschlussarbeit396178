@@ -121,14 +121,7 @@
                     }
                 ],
                 "context_images":[
-                    {
-                        "id": "00_00",
-                        "placement": 14
-                    },
-                    {
-                        "id": "00_02",
-                        "placement": 57
-                    }
+
                 ]
             }
         },
@@ -200,6 +193,14 @@
                         "placement": 99
                     },
                     {
+                        "keyword": "Uses",
+                        "placement": 139
+                    },
+                    {
+                        "keyword": "Rules and Algorithms",
+                        "placement": 139
+                    },
+                    {
                         "keyword": "Example",
                         "placement": 213
                     },
@@ -226,6 +227,10 @@
                     {
                         "keyword": "Tic-Tac-Toe",
                         "placement": 358
+                    },
+                    {
+                        "keyword": "Machine Learning",
+                        "placement": 397
                     }
                 ],
                 "context_images":[
@@ -341,6 +346,10 @@
                         "placement": 903
                     },
                     {
+                        "keyword": "Neuron Inspired",
+                        "placement": 961
+                    },
+                    {
                         "keyword": "ML Example",
                         "placement": 871
                     },
@@ -349,12 +358,20 @@
                         "placement": 871
                     },
                     {
+                        "keyword": "Binary Classification",
+                        "placement": 1012
+                    },
+                    {
                         "keyword": "DL Example",
                         "placement": 724
                     },
                     {
                         "keyword": "Neural Networks",
                         "placement": 724
+                    },
+                    {
+                        "keyword": "Multiple Perceptrons",
+                        "placement": 1078
                     }
                 ],
                 "context_images":[
@@ -591,11 +608,19 @@
                 "context": "Sentiment analysis is an application of NLP that tries to measure how positive or negative a text is. Sentiment analysis, it uses many examples to classify how emotionally charged a sentence or a paragraph is. Sentiment analysis without machine learning would try to detect keywords or patterns that might influence the emotional score. A weakness of sentiment analysis is human language's complexity and context dependency. An example of this complexity is sarcasm being detected wrongly.",
                 "context_keywords":[
                     {
-                        "keyword": "Goal",
-                        "placement": 73
+                        "keyword": "NLP Task",
+                        "placement": 41
                     },
                     {
-                        "keyword": "measure",
+                        "keyword": "Uses ML",
+                        "placement": 151
+                    },
+                    {
+                        "keyword": "to classify",
+                        "placement": 151
+                    },
+                    {
+                        "keyword": "or measure",
                         "placement": 61
                     },
                     {
@@ -700,15 +725,15 @@
                         "message": "You are free to ask questions now."
                     }
                 ],
-                "context": "Eliza is a chatbot that acts like a psychotherapist. Eliza formulates clever sentences that allow the user to just keep talking. ALICE is a chatbot that won the Loebner price three times. ALICE works by using special tags (AIML) that allows bots to recognize patterns. AIML is a markup language that helps to simplify pattern detection in input texts. These two bots are examples or kinds of rule-based chatbots, that means they are chatbots made by writing all its responses/response patterns by hand.",
+                "context": "Eliza is a chatbot that acts like a psychotherapist. It works by formulating clever sentences that allow the user to just keep talking. ALICE is a chatbot that won the Loebner prize three times. The Loebner prize is an annual contest based on the Turing test. ALICE works by using special tags (AIML) that allows bots to recognize patterns. AIML is a markup language that helps to simplify pattern detection in input texts. These two bots are examples or kinds of rule-based chatbots, that means they are chatbots made by writing all its responses/response patterns by hand.",
                 "context_keywords":[
                     {
                         "keyword": "emulates",
-                        "placement": 73
+                        "placement": 43
                     },
                     {
                         "keyword": "Psychotherapist",
-                        "placement": 61
+                        "placement": 43
                     },
                     {
                         "keyword": "formulates",
@@ -720,11 +745,11 @@
                     },
                     {
                         "keyword": "as Questions",
-                        "placement": 279
+                        "placement": 85
                     },
                     {
                         "keyword": "ALICE",
-                        "placement": 279
+                        "placement": 166
                     },
                     {
                         "keyword": "uses",
@@ -744,19 +769,19 @@
                     },
                     {
                         "keyword": "Rule-based",
-                        "placement": 398
+                        "placement": 465
                     },
                     {
                         "keyword": "contains",
-                        "placement": 398
+                        "placement": 465
                     },
                     {
                         "keyword": "Response Patterns",
-                        "placement": 461
+                        "placement": 465
                     },
                     {
                         "keyword": "written manually",
-                        "placement": 461
+                        "placement": 465
                     }
                 ],
                 "context_images":[
@@ -766,7 +791,7 @@
                     },
                     {
                         "id": "05_04",
-                        "placement": 143
+                        "placement": 353
                     }
                 ]
             }
@@ -844,15 +869,15 @@
                     },
                     {
                         "keyword": "Rule-based",
-                        "placement": 510
+                        "placement": 523
                     },
                     {
                         "keyword": "Retrieval-based",
-                        "placement": 510
+                        "placement": 523
                     },
                     {
                         "keyword": "Generative",
-                        "placement": 510
+                        "placement": 523
                     },
                     {
                         "keyword": "Task-oriented",
@@ -869,6 +894,22 @@
                     {
                         "keyword": "Conversational",
                         "placement": 487
+                    },
+                    {
+                        "keyword": "Hand-made Templates",
+                        "placement": 608
+                    },
+                    {
+                        "keyword": "Extracts Responses",
+                        "placement": 684
+                    },
+                    {
+                        "keyword": "Using Deep Learning",
+                        "placement": 684
+                    },
+                    {
+                        "keyword": "Produces Text",
+                        "placement": 776
                     }
                 ],
                 "context_images":[
@@ -878,7 +919,7 @@
                     },
                     {
                         "id": "06_03",
-                        "placement": 510
+                        "placement": 523
                     },
                     {
                         "id": "06_04",
@@ -992,7 +1033,7 @@
                         "message": "You are free to ask questions now."
                     }
                 ],
-                "context": "Vectorization entails transforming plain text into a numerical representation. Vectors can be created from whole texts, sentences or single words. The goal of vectorization is creating vectors that are similar when the meaning of their content is similar as well. The condition to vectorize text is that it should be tokenized. Tokenization means splitting the text into smaller units like words. Tokenization is good in the sense that it makes plain text easier to understand for the computer. The bad part of tokenization is that the single tokens don't necessarily carry much meaning within them.",
+                "context": "Vectorization entails transforming plain text into a numerical representation. Vectors can be created from whole texts, sentences or single words. The goal of vectorization is creating vectors that are similar when the meaning of their content is similar as well. Tokenization should happen before vectorizing text. Tokenization means splitting the text into smaller units like words. Tokenization is good in the sense that it makes plain text easier to understand for the computer. The bad part of tokenization is that the single tokens don't necessarily carry much meaning within them.",
                 "context_keywords":[
                     {
                         "keyword": "Transforms",
@@ -1017,6 +1058,10 @@
                     {
                         "keyword": "Similar Vector",
                         "placement": 183
+                    },
+                    {
+                        "keyword": "Before Vectorizing",
+                        "placement": 269
                     },
                     {
                         "keyword": "Tokenization",
@@ -1148,7 +1193,35 @@
                 "context_keywords":[
                     {
                         "keyword": "Encoder",
-                        "placement": 23
+                        "placement": 72
+                    },
+                    {
+                        "keyword": "Sequence Examples",
+                        "placement": 276
+                    },
+                    {
+                        "keyword": "Translation",
+                        "placement": 276
+                    },
+                    {
+                        "keyword": "Predicted Answers",
+                        "placement": 276
+                    },
+                    {
+                        "keyword": "Word Embedding",
+                        "placement": 406
+                    },
+                    {
+                        "keyword": "Mapping of Words",
+                        "placement": 473
+                    },
+                    {
+                        "keyword": "Comparison",
+                        "placement": 710
+                    },
+                    {
+                        "keyword": "Between Words",
+                        "placement": 819
                     },
                     {
                         "keyword": "Embedding (E)",
@@ -1172,7 +1245,7 @@
                     },
                     {
                         "keyword": "Decoder",
-                        "placement": 23
+                        "placement": 179
                     },
                     {
                         "keyword": "Embedding (D)",
@@ -1297,8 +1370,12 @@
                         "message": "You are free to ask questions now."
                     }
                 ],
-                "context": "Some pros include that the chatbot model understands questions and the context without specific programming. A con of the chatbot model is that it might not be able to respond to a question when the context is too complex. The chatbot model can be classified as retrieval-based and task-oriented in a closed domain. The chatbot model got trained in question answering with a dataset called SQuAD 2.0. This dataset contains 150k example questions and answers",
+                "context": "Some pros include that the chatbot model understands questions and the context without specific programming. A con of the chatbot model is that it might not be able to respond to a question when the context is too complex. The chatbot model can be classified as retrieval-based and task-oriented in a closed domain. The chatbot model got trained in question answering with a dataset called SQuAD 2.0. The SQuAD dataset contains 150k example questions and answers",
                 "context_keywords":[
+                    {
+                        "keyword": "No explicit Programming",
+                        "placement": 90
+                    },
                     {
                         "keyword": "Complexity",
                         "placement": 216
@@ -1329,7 +1406,7 @@
                     },
                     {
                         "keyword": "with SQuADv2.0",
-                        "placement": 355
+                        "placement": 438
                     },
                     {
                         "keyword": "in Question Answering",
@@ -1354,6 +1431,10 @@
                     {
                         "author": "bot",
                         "message": "Also you can ask me anything from any chapter from the course."
+                    },
+                    {
+                        "author": "bot",
+                        "message": "Use the \\unity or +unity command to start the simulation."
                     },
                     {
                         "author": "no-auth",

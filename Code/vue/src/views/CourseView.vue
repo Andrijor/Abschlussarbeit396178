@@ -37,14 +37,15 @@
         <!-- ACTIVITY AREA -->
         <div id="activities" class="glass col-12 col-sm-12 col-md-6 col-lg-8">
 
-            <UnityComponent v-if="gameState.currentActivity == 'unity'" class="col-12" game="MLTraining" :context="unityContext" :aspectX="1" :aspectY="1"/>
+            <UnityComponent v-if="gameState.currentActivity == 'unity10'" class="col-12" game="MLTraining" :context="unityContext" :aspectX="1" :aspectY="1"/>
+            <UnityComponent v-if="gameState.currentActivity == 'unity2'" class="col-12" game="TicTacToe" :context="unityContext" :aspectX="1" :aspectY="1"/>
 
             <div id="conceptual-map-parent" class="col-12" v-else-if="gameState.currentActivity == 'concept'">
                 <ConceptualMapComponent /> <!--@processedKeyword="clearKeyword"-->
             </div>
-            <div id="image-carousel-parent" class="col-12" v-else-if="gameState.currentActivity == 'slides'">
-                <ImageCarouselComponent @processedNewSlide="clearSlide" :newSlide="slideContainer"/>
-            </div>
+            
+            <ImageCarouselComponent class="col-12" v-else-if="gameState.currentActivity == 'slides'" @processedNewSlide="clearSlide" :newSlide="slideContainer"/>
+            
 
         </div>
         
@@ -74,8 +75,6 @@ const IP = 'http://127.0.0.1:5000';
 //const IP = 'http://192.168.122.12:5000';
 //const IP = 'https://a726-79-210-168-175.eu.ngrok.io';
 
-
-
 const unityContext = ref({
     context: undefined,
 });
@@ -93,15 +92,21 @@ const clearSlide = function(){
 
 const textarea = ref('');
 const gameState = useCounterStore();
+var eightyAchieved = false; 
 
 watch(() => gameState.progressBar,
 (percent) => {
+    if (gameState.chapterUnlocked[gameState.currentChapter + 1] || eightyAchieved){
+        return;
+    }
     var newStr = percent.replace("%", "");
     var number = Number(newStr);
     if (number >= 80 && gameState.currentChapter < 10){
         addMessage('no-auth', 'You have unlocked the next chapter and can use \\next.');
         addMessage('no-auth', 'Please note, the progress in the current chapter will be deleted if you use the next command.');
         addMessage('no-auth', 'And please make sure to complete the conceptual map for the chapter using \\concept!');
+        eightyAchieved = true;
+        gameState.unlockChapter(gameState.currentChapter + 1);
     }
 });
 
@@ -184,39 +189,98 @@ function useCommand(command){
                 console.error("No Server Found");
                 console.error(err);
             })
+    } else if (command.slice(0,3) == "add" && gameState.currentActivity == "unity"){
+        let commandArray = command.split(" ");
+        //console.log(unityContext.value.context.unityInstance)
+        if (commandArray.length == 2){
+            unityContext.value.context.unityInstance.SendMessage('KeywordManager', 'addKeyword', commandArray[1]);
+            addMessage('user', textarea.value);
+        } else {
+            addMessage('user', textarea.value);
+            addMessage('no-auth', "Please use only one keyword.");
+        }
         
+    } else if (command.slice(0,3) == "del" && gameState.currentActivity == "unity"){
+        let commandArray = command.split(" ");
+        if (commandArray.length == 2){
+            unityContext.value.context.unityInstance.SendMessage('KeywordManager', 'delKeyword', commandArray[1]);
+            addMessage('user', textarea.value);
+        } else {
+            addMessage('user', textarea.value);
+            addMessage('no-auth', "Please use only one keyword.");
+        }
+    } else if ((command.slice(0,1) == '\\' || command.slice(0,1) == '+') && gameState.currentActivity == "unity"){
+
+        unityContext.value.context.unityInstance.SendMessage('ChatManager', 'ParseMessage', command.slice(1));
+
     } else if (command.slice(0,4) == "goto"){
         let commandArray = command.split(" ")
         let prevChapter = gameState.currentChapter;  
 
         if (commandArray.length == 2 && commandArray[0] == "goto" && !isNaN(parseInt(commandArray[1]))){
             //console.log(parseInt(commandArray[1]));
-            gameState.setCurrentChapter(commandArray[1]);
+            if (gameState.chapterUnlocked[commandArray[1]]){
 
-            if (gameState.currentChapter == prevChapter){
-                addMessage('no-auth', "Chapter " + commandArray[1] + " is not available or doesn't exist.")
+                gameState.setCurrentChapter(commandArray[1]);
+                if (gameState.currentChapter == prevChapter){
+                    addMessage('user', textarea.value);
+                    addMessage('no-auth', "Chapter " + commandArray[1] + " is not available, you're already in it or it doesn't exist.")
+                } else {
+                    addMessage('user', textarea.value)
+                    eightyAchieved = false;
+                    addMessage('no-auth', "Jumping to chapter " + gameState.chapterString)
+                    //gameState.resetChapter();
+                }
             } else {
-                addMessage('user', textarea.value)
-                addMessage('no-auth', "Jumping to chapter " + gameState.chapterString)
-
+                addMessage('user', textarea.value);
+                addMessage('no-auth', "The targeted chapter hasn't been unlocked yet.");
             }
-            
+
         } else {
-            addMessage('user', textarea.value)
-            addMessage('no-auth', "Command formatted incorrectly")
+            addMessage('user', textarea.value);
+            addMessage('no-auth', "Command formatted incorrectly");
+        }
+    } else if (command == "suggest"){
+        addMessage('user', textarea.value);
+        let suggestion = gameState.suggestQuestion();
+        if (suggestion == ""){
+            addMessage('no-auth', "No suggestions available.");
+        } else {
+            addMessage('no-auth', suggestion);
         }
 
     } else if (command == "next"){
-        addMessage('user', textarea.value)
-        gameState.nextChapter();
-        addMessage('no-auth', "Starting Chapter " + gameState.chapterString)
+        addMessage('user', textarea.value);       
+        if (gameState.chapterUnlocked[parseInt(gameState.currentChapter) + 1]){
+            gameState.nextChapter();
+            eightyAchieved = false;
+            addMessage('no-auth', "Starting Chapter " + gameState.chapterString);
+        } else {
+            addMessage('no-auth', "The next chapter hasn't been unlocked, please keep asking questions.");
+        }
+
+        //gameState.resetChapter();
         // Make it like \Start!
     } else if (command == "break"){
         addMessage('no-auth', gameState.getBreakCode());
-    } else if (command == "unity" || command == "concept" || command == "slides"){
+    } else if (command == "concept" || command == "slides"){
         addMessage('user', textarea.value)
         addMessage('no-auth', "Changing activity...")
         gameState.setActivityTo(command);
+    } else if (command == "unity"){
+        addMessage('user', textarea.value)
+        
+        if(gameState.currentChapter == 2){
+            gameState.setActivityTo(command+"2");
+            addMessage('no-auth', "Changing activity...")
+        } else if (gameState.currentChapter == 10){
+            gameState.setActivityTo(command+"10");
+            addMessage('no-auth', "Changing activity...")
+        } else {
+            addMessage('no-auth', "There is no unity game available for this chapter.")
+        }
+        
+        
     } else if (command == "red" && gameState.currentActivity == 'unity'){
 
         unityContext.value.context.send('GameManager', 'colorCircleRed')
@@ -351,6 +415,7 @@ const processAnswer = function(answer){
 #chapter {
     justify-self: flex-start;
     flex: 1 1;
+    margin: 0px;
 }
 
 #message-holder {
@@ -386,12 +451,19 @@ const processAnswer = function(answer){
 .progress-bar-custom {
     height: 2em;
     --bs-progress-bg: var(--aj-glass-background);
-    --bs-progress-bar-bg: rgba(213, 126, 235, 0.70);
+    /*--bs-progress-bar-bg: rgba(213, 126, 235, 0.70);*/
+    --bs-progress-bar-bg: var(--aj-user-message-background-color);
+    margin: 0em 0em 0.5em 0em;
+    border-radius: var(--aj-glass-border-radius);
+    box-shadow: var(--aj-glass-box-shadow);
+    backdrop-filter: var(--aj-glass-backdrop-filter);
+    -webkit-backdrop-filter: var(--aj-glass-webkit-backdrop-filter);
 }
 
 .progress-bar {
     width: v-bind('gameState.progressBar');
     color: var(--color-text)
+
 }
 
 .glass {

@@ -100,6 +100,14 @@ const commandList = ref([
     {
         command: '\\concept',
         effect: 'Displays the conceptual map activity.'
+    },
+    {
+        command: '\\next',
+        effect: 'Takes you to the next chapter if it\'s unlocked.'
+    },
+    {
+        command: '\\goto [chapter Number]',
+        effect: 'Takes you to the chosen chapter if it\'s unlocked.'
     }
 ]);
 

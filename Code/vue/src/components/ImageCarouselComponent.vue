@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { onMounted, watch } from 'vue';
+import { onBeforeUnmount, onMounted, watch } from 'vue';
 import { useCounterStore } from "@/stores/genericStore"
 import { Carousel } from "bootstrap/dist/js/bootstrap.min.js"
 const gameState = useCounterStore();
@@ -44,19 +44,47 @@ const emits = defineEmits([
     'processedNewSlide'
 ]);
 
+let baseSize = "0px";
+let carouselElement;
+let carousel;
+
 onMounted(() => {
     
-    let carouselElement = document.querySelector("#image-carousel");
-    let carousel = new Carousel(carouselElement);
+    carouselElement = document.querySelector("#image-carousel");
+    carousel = new Carousel(carouselElement);
 
-    watch(props.newSlide, () => {
-        if (isNaN(props.newSlide.slide)){
-            return;
-        }
-        carousel.to(props.newSlide.slide - 1);
-        emits('processedNewSlide');
+    watch(gameState.currentSlides, () => {
+        carousel.to(gameState.currentSlides.length - 1);
+        
     }, { flush: 'post'});
+
+    //addEventListener(onresize, updateComponentSize());
+    //updateComponentSize();
 });
+
+onBeforeUnmount(() =>{
+    //removeEventListener(onresize, updateComponentSize());
+    carousel.dispose();
+    //console.log("Dispose!!");
+    //console.log(carousel);
+});
+
+function updateComponentSize() {
+
+    let parent = document.querySelector("#activities");
+    let parentHeight = parent.clientHeight;
+    let parentWidth = parent.clientWidth;
+
+    if (parentHeight >= parentWidth){
+        baseSize = parentWidth + "px";
+    } else {
+        baseSize = parentHeight + "px";
+    }
+    //console.log(`Parent height: ${parentHeight}px`);
+    //console.log(`Parent width: ${parentWidth}px`);
+    //console.log("Updatinnnnnnnn");
+    //console.log(baseSize);
+}
 
 </script>
 
@@ -68,10 +96,16 @@ onMounted(() => {
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
-    /*height: 100%;*/
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     min-width: 200px;
+}
+
+#image-carousel {
+    max-width: 89vh;
+    max-height: 89vh;
+    height: auto;
+    width: auto;
 }
 
 img {

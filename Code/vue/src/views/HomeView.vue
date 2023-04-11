@@ -23,7 +23,7 @@
                 <h1>Start Course</h1>
                 
                 <div class="col-6">
-                    <RouterLink to="/course" class="router-link btn btn-flexible col-12">
+                    <RouterLink to="/course" @click="startFromZero" class="router-link btn btn-flexible col-12">
                             From the beginning
                     </RouterLink>
                 </div>
@@ -38,9 +38,10 @@
                 </div>
 
                 <div class="col-6">
-                    <button class="btn btn-flexible col-12">
+                    <RouterLink to="/chapters" class="router-link btn btn-flexible col-12" @click="gameState.setBreakCode">
                         Continue course
-                    </button>
+                    </RouterLink>
+
                 </div>
             
             </div>
@@ -54,6 +55,12 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 //import { useLocalStorage } from "@vueuse/core"
 
 const gameState = useCounterStore();
+
+function startFromZero(){
+    if (gameState.currentChapter != 0){
+        gameState.setCurrentChapter(0);
+    }
+}
 
 function typeCode(value) {
     

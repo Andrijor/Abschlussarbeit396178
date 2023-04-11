@@ -10,7 +10,7 @@
             </RouterLink>
             <button v-for="index in gameState.chapterCount - 1" type="button" class="chapter-box glass col-12">
 
-                <RouterLink v-if="gameState.chapterUnlocked[index]" to="/course"  @click="gameState.setCurrentChapter(index)">
+                <RouterLink v-if="gameState.chapterUnlocked[index]" to="/course"  @click="setChapter(index)">
                     
                         <div class="chapter-title col-12">Chapter</div>
                         <div  class="chapter-number">
@@ -44,6 +44,12 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 import { useCounterStore } from "@/stores/genericStore"
 
 const gameState = useCounterStore();
+function setChapter(index){
+    if (gameState.currentChapter != index){
+        gameState.setCurrentChapter(index);
+    }
+    
+}
 </script>
 
 <style scoped>
